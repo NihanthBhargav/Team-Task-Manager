@@ -1,0 +1,202 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0d0f14;
+  --bg-secondary: #13161e;
+  --bg-card: #1a1e28;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-lighter: rgba(255, 255, 255, 0.15);
+  --text-primary: #e8eaf0;
+  --text-secondary: #9aa3b8;
+  --accent-blue: #6c8cff;
+  --accent-green: #34d399;
+  --accent-orange: #fb923c;
+  --accent-purple: #a78bfa;
+  --accent-red: #ff6b6b;
+  --hover-light: rgba(255, 255, 255, 0.05);
+  --hover-lighter: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Syne', sans-serif;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input, textarea, select {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #21263380;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3347;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-blue);
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #5a7aee;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: transparent;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  color: var(--accent-red);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  border-color: var(--border-lighter);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-admin {
+  background-color: rgba(108, 140, 255, 0.15);
+  color: var(--accent-blue);
+}
+
+.badge-member {
+  background-color: rgba(52, 211, 153, 0.15);
+  color: var(--accent-green);
+}
+
+.badge-todo {
+  background-color: rgba(154, 163, 184, 0.12);
+  color: var(--text-secondary);
+}
+
+.badge-in-progress {
+  background-color: rgba(251, 146, 60, 0.12);
+  color: var(--accent-orange);
+}
+
+.badge-done {
+  background-color: rgba(52, 211, 153, 0.12);
+  color: var(--accent-green);
+}
+
+.badge-low {
+  background-color: rgba(52, 211, 153, 0.12);
+  color: var(--accent-green);
+}
+
+.badge-medium {
+  background-color: rgba(251, 146, 60, 0.12);
+  color: var(--accent-orange);
+}
+
+.badge-high {
+  background-color: rgba(255, 107, 107, 0.12);
+  color: var(--accent-red);
+}
+
+/* Progress Bars */
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.06);
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill-blue {
+  background-color: var(--accent-blue);
+}
+
+.progress-fill-green {
+  background-color: var(--accent-green);
+}
+
+.progress-fill-orange {
+  background-color: var(--accent-orange);
+}
